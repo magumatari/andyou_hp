@@ -1,0 +1,179 @@
+/* Google Fonts は index.html で読み込み済み */
+:root{
+--bg:#0b0b0c; /* 背景（ダーク） */
+--card:#141417; /* セクション/カード背景 */
+--text:#f4f5f6; /* 文字色（明） */
+--muted:#b6b8bd; /* 補助文字色 */
+--brand:#ff6a00; /* アクセント（オレンジ系） */
+--line:#232428; /* 枠線 */
+--surface:#0f0f12; /* ヘッダー/フッター */
+--shadow:0 10px 30px rgba(0,0,0,.35);
+--radius:16px;
+--radius-sm:12px;
+--max:1100px; /* コンテンツ最大幅 */
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+margin:0; font-family:"Noto Sans JP",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic UI","Yu Gothic","Noto Sans JP",sans-serif;
+background:var(--bg); color:var(--text); line-height:1.8;
+}
+
+
+/* ヘッダー */
+.site-header{
+position:sticky; top:0; z-index:50; backdrop-filter:saturate(120%) blur(8px);
+background:linear-gradient(180deg, rgba(12,12,14,.85), rgba(12,12,14,.65));
+border-bottom:1px solid var(--line);
+}
+.header-inner{max-width:var(--max); margin:auto; display:flex; align-items:center; gap:20px; padding:14px 20px}
+.brand{display:flex; align-items:center; gap:12px; text-decoration:none; color:var(--text)}
+/* 既存 .brand__logo の background-image を置き換え */
+.brand__logo{
+  width:40px; height:40px; border-radius:10px;
+  background: center/contain no-repeat url('../img/kizuna_logo2.jpg');
+  box-shadow:var(--shadow);
+}
+nav{margin-left:auto}
+.nav{display:flex; gap:18px; flex-wrap:wrap}
+.nav a{color:var(--text); text-decoration:none; opacity:.9; padding:8px 10px; border-radius:10px}
+.nav a:hover, .nav a:focus{background:var(--card)}
+.sns{display:flex; gap:10px; margin-left:8px}
+.sns a{display:inline-flex; width:34px; height:34px; border:1px solid var(--line); border-radius:10px; align-items:center; justify-content:center; text-decoration:none; color:var(--text); opacity:.85}
+.sns a:hover{background:var(--card)}
+
+
+/* ヒーロー */
+.hero{position:relative; isolation:isolate;}
+.hero__media{
+  position:absolute; inset:0; z-index:-1;
+  background:#000 url('../img/bg-lines4.png') center/cover no-repeat;
+  opacity:.9; /* 透けさせたいなら 0.4〜0.8 に調整 */
+}
+.hero__gradient{position:absolute; inset:0; z-index:-1; background:radial-gradient(60% 60% at 20% 20%, rgba(255,106,0,.25), transparent 60%), radial-gradient(70% 70% at 80% 20%, rgba(255,255,255,.12), transparent 60%)}
+.hero-inner{max-width:var(--max); margin:auto; padding:72px 20px 64px}
+.kicker{display:inline-block; font-size:.9rem; letter-spacing:.1em; color:var(--muted); text-transform:uppercase; border:1px solid var(--line); padding:6px 10px; border-radius:999px; backdrop-filter:blur(6px)}
+.hero h1{margin:14px 0 10px; font-size:clamp(28px, 4.5vw, 48px); line-height:1.25}
+.hero p{max-width:780px; color:var(--muted); font-size:1.05rem}
+
+
+/* セクション共通 */
+section{padding:64px 20px}
+.container{max-width:var(--max); margin:auto}
+.section-title{font-size:clamp(22px, 3.2vw, 32px); margin:0 0 10px}
+.section-kicker{color:var(--brand); font-weight:700; letter-spacing:.06em; text-transform:lowercase}
+.section-desc{color:var(--muted); margin:0 0 28px}
+
+
+/* 事業案内 */
+.cards{display:grid; grid-template-columns:repeat(5,1fr); gap:18px}
+.card{background:var(--card); border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow)}
+.card__media{aspect-ratio:16/10; background:#222 center/cover no-repeat}
+.card__body{padding:18px}
+.card h3{margin:0 0 6px; font-size:1.05rem}
+.card p{margin:0; color:var(--muted)}
+@media (max-width:1000px){.cards{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:600px){.cards{grid-template-columns:1fr}}
+
+
+/* 会社概要 */
+.corporate{display:grid; grid-template-columns:1.2fr 1fr; gap:24px}
+.panel{background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:24px; box-shadow:var(--shadow)}
+.dl{display:grid; grid-template-columns:160px 1fr; gap:10px 18px; margin:0}
+.dl dt{color:var(--muted)}
+.dl dd{margin:0}
+@media (max-width:900px){.corporate{grid-template-columns:1fr}}
+@media (max-width:520px){.dl{grid-template-columns:1fr} .dl dt{font-weight:700; color:var(--text)}}
+
+
+/* 採用情報 */
+.recruit-grid{display:grid; grid-template-columns:1fr 1fr; gap:20px}
+.bullets{margin:0; padding-left:18px}
+.bullets li{margin:.3em 0}
+@media (max-width:900px){.recruit-grid{grid-template-columns:1fr}}
+
+
+/* お問い合わせ */
+.form{display:grid; gap:14px}
+.form label{display:block; font-weight:700; margin:6px 0}
+.input, .textarea{width:100%; padding:12px 14px; border-radius:12px; border:1px solid var(--line); background:#0e0f12; color:var(--text)}
+.textarea{min-height:160px; resize:vertical}
+.actions{display:flex; gap:10px; flex-wrap:wrap}
+.btn{appearance:none; border:none; padding:12px 18px; border-radius:12px; cursor:pointer; font-weight:700}
+.btn-primary{background:var(--brand); color:#111}
+.btn-ghost{background:transparent; color:var(--text); border:1px solid var(--line)}
+
+/* フッター */
+footer{background:var(--surface); border-top:1px solid var(--line)}
+.footer-inner{max-width:var(--max); margin:auto; padding:26px 20px; display:flex; gap:16px; align-items:center; justify-content:space-between; flex-wrap:wrap}
+.copyright{color:var(--muted); font-size:.95rem}
+
+
+/* ページトップ */
+.pagetop{position:fixed; right:18px; bottom:18px; z-index:30}
+.pagetop a{display:inline-flex; align-items:center; justify-content:center; width:44px; height:44px; border-radius:12px; background:var(--brand); color:#111; text-decoration:none; font-weight:900}
+
+
+/* ===================================================================
+Responsive Scaffold — ひな形（数値は自由に調整してください）
+使い方: それぞれのメディアクエリ内に上書きスタイルを追記
+注意: 既存の @media ルール（上部にあり）と重複する場合は、
+こちらの“後ろに書いた方”が基本的に優先されます（同じ詳細度なら）。
+=================================================================== */
+
+
+/* ▼ xs: ~480px（スマホ縦） --------------------------------------- */
+@media (max-width: 480px) {
+/* 例: 余白を少し詰める */
+/* section { padding: 48px 16px; } */
+/* .hero-inner { padding: 56px 16px 48px; } */
+/* .header-inner { flex-wrap: wrap; } */
+/* .nav { gap: 12px; } */
+/* .cards { grid-template-columns: 1fr; } */
+/* .corporate { grid-template-columns: 1fr; } */
+/* .recruit-grid { grid-template-columns: 1fr; } */
+/* .dl { grid-template-columns: 1fr; } */
+}
+
+
+/* ▼ sm: 600px~（スマホ横/小さめタブレット） ---------------------- */
+@media (min-width: 600px) {
+/* 例: カード2列 */
+/* .cards { grid-template-columns: repeat(2, 1fr); } */
+}
+
+
+/* ▼ md: 768px~（一般的なタブレット） ----------------------------- */
+@media (min-width: 768px) {
+/* 例: 余白を少し広げる */
+/* section { padding: 64px 20px; } */
+/* .hero-inner { padding: 80px 20px 72px; } */
+}
+
+
+/* ▼ lg: 1024px~（ノートPC） -------------------------------------- */
+@media (min-width: 1024px) {
+/* 例: カード4列/会社概要2カラム */
+/* .cards { grid-template-columns: repeat(4, 1fr); } */
+/* .corporate { grid-template-columns: 1.2fr 1fr; } */
+}
+
+
+/* ▼ xl: 1280px~（デスクトップ広め） ------------------------------- */
+@media (min-width: 1280px) {
+/* 例: 最大幅の調整 */
+/* .container { max-width: 1200px; } */
+}
+
+/* ▼ Utility（任意）: 表示・非表示の補助クラス -------------------- */
+/* 使い方: 必要なところにクラスを付与して使います。 */
+@media (max-width: 480px) { .hide-on-xs { display: none !important; } }
+@media (min-width: 481px) { .show-only-xs { display: none !important; } }
+@media (max-width: 600px) { .hide-on-sm { display: none !important; } }
+@media (min-width: 601px) { .show-only-sm { display: none !important; } }
+@media (max-width: 768px) { .hide-on-md { display: none !important; } }
+@media (min-width: 769px) { .show-only-md { display: none !important; } }
+@media (max-width: 1024px) { .hide-on-lg { display: none !important; } }
+@media (min-width: 1025px) { .show-only-lg { display: none !important; } }
+@media (max-width: 1280px) { .hide-on-xl { display: none !important; } }
+@media (min-width: 1281px) { .show-only-xl { display: none !important; } }

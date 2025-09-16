@@ -1,0 +1,201 @@
+<!-- 分離型テンプレート / Save as 2 files:
+1) index.html
+2) assets/css/style.css
+フォルダ構成:
+project-root/
+├─ index.html
+└─ assets/
+   ├─ css/style.css
+   └─ img/(任意の画像)
+-->
+
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>kizuna Sample | Corporate Site</title>
+  <meta name="description" content="合同会社 絆企画グループ_HP">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="title_logo" style="background-image:url('assets/img/kizuna_logo1.png')" aria-hidden="true"></div>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="Home">
+        <span class="brand__logo" aria-hidden="true"></span>
+        <span class="brand__name">絆企画グループ</span>
+      </a>
+      <div class="hero-inner">
+    
+      <nav aria-label="主要ナビゲーション">
+        <div class="nav">
+          <a href="#business">事業案内</a>
+          <a href="#corporate">会社概要</a>
+          <a href="#recruit">採用情報</a>
+          <a href="#contact">問い合せ</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main id="top" class="hero">
+    <div class="hero__media" aria-hidden="true"></div>
+    <div class="hero__gradient" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <div class="kicker">合同会社 絆企画グループ</div>
+      
+      <!--
+      <div class="hero-title">
+      <img src="assets/img/kizuna_logo1.png" alt="絆画Group ロゴ"
+          class="hero-title__logo" width="112" height="112" decoding="async">
+      </div>
+      </div>
+      -->
+
+
+      <h1>「人と人とのつながり」を第一に考える会社。<br>お客様、パートナー企業、従業員、関わるすべての方との絆を大切に事業を営んでいる。</h1>
+      <p>「点から線へ、線が縁を結び絆へ」──そんな存在を目指して日々活動しています。</p>
+    </div>
+
+
+
+    <!-- Business -->
+    <section id="business">
+      <div class="container">
+        <div class="section-kicker">business</div>
+        <h2 class="section-title">事業案内</h2>
+
+        <div class="cards">
+          <article class="card">
+            <div class="card__media" style="background-image:url('assets/img/hanbai.jpg')" aria-hidden="true"></div>
+            <div class="card__body">
+              <h3>販売促進事業</h3>
+              <p>サンプルサンプルサンプルサンプル。</p>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card__media" style="background-image:url('assets/img/koukoku_dairi.jpeg')" aria-hidden="true"></div>
+            <div class="card__body">
+              <h3>広告代理業</h3>
+              <p>サンプルサンプルサンプルサンプル。</p>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card__media" style="background-image:url('assets/img/konsaru.jpg')" aria-hidden="true"></div>
+            <div class="card__body">
+              <h3>コンサルティング事業</h3>
+              <p>サンプルサンプルサンプルサンプル。</p>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card__media" style="background-image:url('assets/img/fp.jpeg')" aria-hidden="true"></div>
+            <div class="card__body">
+              <h3>ファイナンシャルプランニング事業</h3>
+              <p>サンプルサンプルサンプルサンプル。</p>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card__media" style="background-image:url('assets/img/kaden_mente.jpeg')" aria-hidden="true"></div>
+            <div class="card__body">
+              <h3>家電メンテナンス業</h3>
+              <p>サンプルサンプルサンプルサンプル。</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Corporate -->
+    <section id="corporate">
+      <div class="container corporate">
+        <div class="panel">
+          <div class="section-kicker">corporate</div>
+          <h2 class="section-title">会社概要</h2>
+          <dl class="dl">
+            <dt>法人名</dt><dd>合同会社 絆企画グループ</dd>
+            <dt>フリガナ</dt><dd>ゴウドウガイシャ キズナキカクグループ</dd>
+            <dt>設立</dt><dd>2018年9月</dd>
+            <dt>代表者</dt><dd>遠藤 一匡</dd>
+            <dt>事業内容</dt><dd>販売促進事業、代理店販売業、広告代理業、コンサルティング事業、ファイナンシャルプランニング事業、家電メンテナンス業</dd>
+            <dt>所在地</dt><dd>〒981-0961 宮城県仙台市青葉区桜ヶ丘6-38-5</dd>
+            <!--　<dt>TEL</dt><dd>011-522-9632</dd> -->
+          </dl>
+        </div>
+        <aside class="panel">
+        <!--
+          <h3 style="margin-top:0">会社イメージ</h3>
+          <p style="color:var(--muted); margin-top:6px">ここに紹介画像や地図を配置できます（任意）。</p>
+        -->
+          
+            <div class="card__media" style="border-radius:12px; background-image:url('assets/img/sample.jpg')" aria-hidden="true"></div>
+        </aside>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+    <!-- リクルート
+    <section id="contact">
+      <div class="container">
+        <div class="section-kicker">contact</div>
+        <h2 class="section-title">問い合せ</h2>
+
+        <form class="panel form" action="#" method="post">
+          <div>
+            <label for="company">会社名</label>
+            <input class="input" id="company" name="company" type="text" placeholder="例）合同会社 絆企画">
+          </div>
+          <div>
+            <label for="name">お名前</label>
+            <input class="input" id="name" name="name" type="text" placeholder="例）山田 太郎">
+          </div>
+          <div>
+            <label for="email">メールアドレス</label>
+            <input class="input" id="email" name="email" type="email" placeholder="example@example.com">
+          </div>
+          <div>
+            <label for="tel">電話番号</label>
+            <input class="input" id="tel" name="tel" type="tel" placeholder="090-0000-0000">
+          </div>
+          <div>
+            <label for="message">お問い合わせ内容</label>
+            <textarea class="textarea" id="message" name="message" placeholder="ご用件をご記入ください"></textarea>
+          </div>
+          <div class="actions">
+            <button class="btn btn-ghost" type="reset">リセット</button>
+            <button class="btn btn-primary" type="submit">送信</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+-->
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <small class="copyright">Copyright © 絆企画 inc., All rights reserved.</small>
+      <nav aria-label="フッターナビ">
+        <a href="#top" class="btn btn-ghost" style="padding:8px 12px">Page Top</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- PageTop Floating -->
+  <div class="pagetop"><a href="#top" aria-label="ページトップへ">↑</a></div>
+
+  <!-- TODO: 画像と文章は assets/ 配下に置き換えてください。フォーム運用は外部サービスに差し替え推奨。 -->
+</body>
+</html>
